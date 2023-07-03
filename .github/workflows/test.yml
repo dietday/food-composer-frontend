@@ -1,5 +1,4 @@
 on:
-  workflow_dispatch:
   push:
     branches:
       - '*'
@@ -8,7 +7,6 @@ on:
       - '*'
 
 jobs:
-
   webapp-lint:
     name: Lint webapp
     runs-on: ubuntu-latest
