@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: ./.github/actions/setup-project
+      - uses: dietday/food-composer-frontend/.github/actions/setup-project@actions/setup-project/v0.1.3-berry
 
       - name: Lint
         run: yarn web lint
@@ -26,7 +26,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: ./.github/actions/setup-project
+      - uses: dietday/food-composer-frontend/.github/actions/setup-project@actions/setup-project/v0.1.3-berry
 
       - name: Run tests with jest
         run: yarn web test:ci
@@ -37,7 +37,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: ./.github/actions/setup-project
+      - uses: dietday/food-composer-frontend/.github/actions/setup-project@actions/setup-project/v0.1.3-berry
 
       - name: Build Next.js app
         run: yarn web build
