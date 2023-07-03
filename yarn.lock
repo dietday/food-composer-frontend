@@ -4402,7 +4402,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"is-ci@npm:^3.0.0":
+"is-ci@npm:^3.0.0, is-ci@npm:^3.0.1":
   version: 3.0.1
   resolution: "is-ci@npm:3.0.1"
   dependencies:
@@ -6798,6 +6798,7 @@ __metadata:
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
     husky: ^8.0.3
+    is-ci: ^3.0.1
     lint-staged: ^13.2.3
   languageName: unknown
   linkType: soft
