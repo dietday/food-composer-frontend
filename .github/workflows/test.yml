@@ -42,8 +42,6 @@ jobs:
       - name: Build Next.js app
         run: yarn web build
 
-#      - uses: ./.github/actions/install-cypress
-
       - name: Cypress.io
         uses: cypress-io/github-action@v5
         with:
