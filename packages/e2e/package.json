@@ -4,7 +4,7 @@
   "scripts": {
     "cypress": "cypress open",
     "cypress:ci": "cypress run",
-    "lint": "eslint",
+    "lint": "eslint .",
     "tscheck": "tsc --noEmit"
   },
   "devDependencies": {
