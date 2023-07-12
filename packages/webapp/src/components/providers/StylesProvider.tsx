@@ -1,17 +1,17 @@
-'use client';
+'use client'
 
-import { ReactNode } from 'react';
-import { MantineProvider, useEmotionCache } from '@mantine/core';
-import { useServerInsertedHTML } from 'next/navigation';
-import { CacheProvider } from '@emotion/react';
+import { ReactNode } from 'react'
+import { MantineProvider, useEmotionCache } from '@mantine/core'
+import { useServerInsertedHTML } from 'next/navigation'
+import { CacheProvider } from '@emotion/react'
 
 interface StylesProviderProps {
-  children: ReactNode | string;
+  children: ReactNode | string
 }
 
 const StylesProvider = ({ children }: StylesProviderProps) => {
-  const cache = useEmotionCache();
-  cache.compat = true;
+  const cache = useEmotionCache()
+  cache.compat = true
 
   useServerInsertedHTML(() => (
     <style
@@ -20,7 +20,7 @@ const StylesProvider = ({ children }: StylesProviderProps) => {
         __html: Object.values(cache.inserted).join(' '),
       }}
     />
-  ));
+  ))
 
   return (
     <CacheProvider value={cache}>
@@ -28,7 +28,7 @@ const StylesProvider = ({ children }: StylesProviderProps) => {
         {children}
       </MantineProvider>
     </CacheProvider>
-  );
-};
+  )
+}
 
-export default StylesProvider;
+export default StylesProvider
